@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<servlet>
+		<servlet-name>UpdateServlet</servlet-name>
+		<servlet-class>com.rl.ces.controller.UpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateServlet</servlet-name>
+		<url-pattern>/UpdateServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>QueryServlet</servlet-name>
+		<servlet-class>com.rl.ces.controller.QueryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueryServlet</servlet-name>
+		<url-pattern>/QueryServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SeveServlet</servlet-name>
+		<servlet-class>com.rl.ces.controller.SeveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SeveServlet</servlet-name>
+		<url-pattern>/SeveServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteServlet</servlet-name>
+		<servlet-class>com.rl.ces.controller.DeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteServlet</servlet-name>
+		<url-pattern>/DeleteServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SelectServlet</servlet-name>
+		<servlet-class>com.rl.ces.controller.SelectServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.rl.ces.controller.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExitServlet</servlet-name>
+		<servlet-class>com.rl.ces.controller.ExitServlet</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>SelectServlet</servlet-name>
+		<url-pattern>/SelectServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExitServlet</servlet-name>
+		<url-pattern>/ExitServlet</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>fone</filter-name>
+		<filter-class>com.rl.ces.enfilter.Filter_demo</filter-class>
+
+		<init-param>
+			<param-name>encode</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+
+
+	</filter>
+	<filter-mapping>
+		<filter-name>fone</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>logf</filter-name>
+		<filter-class>com.rl.ces.enfilter.LogFliter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>logf</filter-name>
+		<url-pattern>/ecs/*</url-pattern>
+	</filter-mapping>
+</web-app>
